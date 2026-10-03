@@ -16,9 +16,9 @@ const products = [
   },
 
   {
-    name: "Midnight Oversized Tee",
+    name: "slim fit Tee",
     description: "Heavyweight cotton",
-    price: 1699,
+    price: 1100,
     category: "tshirt",
     color: "black",
     badge: "BESTSELLER"
@@ -27,7 +27,7 @@ const products = [
   {
     name: "Stone Cargo Pants",
     description: "Relaxed fit cargo pants",
-    price: 2899,
+    price: 1800,
     category: "pants",
     color: "brown",
     badge: ""
