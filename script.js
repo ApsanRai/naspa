@@ -1,3 +1,171 @@
+// ========================================
+// 🛍️ NAPSA PRODUCTS
+// ========================================
+// ONLY EDIT PRODUCTS HERE
+// Change name, description, price, or category.
+// ========================================
+
+const products = [
+  {
+    name: "Core Logo Tee",
+    description: "Oversized cotton T-shirt",
+    price: 1499,
+    category: "tshirt",
+    color: "white",
+    badge: "NEW"
+  },
+
+  {
+    name: "Midnight Oversized Tee",
+    description: "Heavyweight cotton",
+    price: 1699,
+    category: "tshirt",
+    color: "black",
+    badge: "BESTSELLER"
+  },
+
+  {
+    name: "Stone Cargo Pants",
+    description: "Relaxed fit cargo pants",
+    price: 2899,
+    category: "pants",
+    color: "brown",
+    badge: ""
+  },
+
+  {
+    name: "Utility Wide Pants",
+    description: "Wide fit everyday pants",
+    price: 2699,
+    category: "pants",
+    color: "grey",
+    badge: ""
+  },
+
+  {
+    name: "Essential Black Tee",
+    description: "Minimal everyday T-shirt",
+    price: 1399,
+    category: "tshirt",
+    color: "black",
+    badge: ""
+  },
+
+  {
+    name: "Graphic Logo Tee",
+    description: "Premium oversized fit",
+    price: 6969696,
+    category: "tshirt",
+    color: "white",
+    badge: ""
+  },
+
+  {
+    name: "Washed Grey Pants",
+    description: "Relaxed street fit",
+    price: 2799,
+    category: "pants",
+    color: "grey",
+    badge: ""
+  },
+
+  {
+    name: "Sand Relaxed Pants",
+    description: "Everyday relaxed fit",
+    price: 2599,
+    category: "pants",
+    color: "brown",
+    badge: ""
+  }
+];
+
+
+// ========================================
+// AUTOMATICALLY CREATE PRODUCTS
+// ========================================
+
+function displayProducts() {
+
+  const container = document.getElementById("products");
+
+  container.innerHTML = "";
+
+  products.forEach((product, index) => {
+
+    let clothing;
+
+    if (product.category === "tshirt") {
+
+      clothing = `
+        <div class="fake-shirt ${product.color === "black" ? "white-shirt" : ""}">
+          NAPSA
+        </div>
+      `;
+
+    } else {
+
+      clothing = `
+        <div class="fake-pants ${product.color === "grey" ? "dark-pants" : ""}">
+          NAPSA
+        </div>
+      `;
+
+    }
+
+    container.innerHTML += `
+
+      <div class="product ${product.category}">
+
+        <div class="product-img ${product.color}">
+
+          ${
+            product.badge
+            ? `<span class="new">${product.badge}</span>`
+            : ""
+          }
+
+          ${clothing}
+
+        </div>
+
+        <h3>${product.name}</h3>
+
+        <p>${product.description}</p>
+
+        <strong>
+          Rs. ${product.price.toLocaleString()}
+        </strong>
+
+        <button onclick="addProductToCart(${index})">
+          ADD TO CART
+        </button>
+
+      </div>
+
+    `;
+
+  });
+
+}
+
+
+// ========================================
+// ADD PRODUCT TO CART
+// ========================================
+
+function addProductToCart(index) {
+
+  const product = products[index];
+
+  addToCart(product.name, product.price);
+
+}
+
+
+// ========================================
+// CART
+// ========================================
+
 let cart = [];
 
 
@@ -6,13 +174,14 @@ let cart = [];
 function addToCart(name, price) {
 
   cart.push({
-    name: fitted tees,
-    price: 12000
+    name: name,
+    price: price
   });
 
   updateCart();
 
   openCart();
+
 }
 
 
@@ -41,11 +210,11 @@ function updateCart() {
     total.innerText = "Rs. 0";
 
     return;
+
   }
 
 
   cartItems.innerHTML = "";
-
 
   let totalPrice = 0;
 
@@ -95,7 +264,9 @@ function removeItem(index) {
 }
 
 
-// OPEN CART
+// ========================================
+// CART OPEN / CLOSE
+// ========================================
 
 function openCart() {
 
@@ -108,8 +279,6 @@ function openCart() {
 }
 
 
-// CLOSE CART
-
 function closeCart() {
 
   document.getElementById("cart")
@@ -121,15 +290,17 @@ function closeCart() {
 }
 
 
+// ========================================
 // FILTER PRODUCTS
+// ========================================
 
 function filterProducts(category) {
 
-  const products =
+  const productCards =
     document.querySelectorAll(".product");
 
 
-  products.forEach(product => {
+  productCards.forEach(product => {
 
     if (
       category === "all" ||
@@ -149,7 +320,9 @@ function filterProducts(category) {
 }
 
 
+// ========================================
 // CHECKOUT
+// ========================================
 
 function checkout() {
 
@@ -168,3 +341,10 @@ function checkout() {
   );
 
 }
+
+
+// ========================================
+// LOAD PRODUCTS WHEN PAGE OPENS
+// ========================================
+
+displayProducts();
