@@ -7,18 +7,18 @@
 
 const products = [
   {
-    name: "baggy t-shirt",
+    name: "Core Logo Tee",
     description: "Oversized cotton T-shirt",
-    price: 1000,
+    price: 1499,
     category: "tshirt",
     color: "white",
     badge: "NEW"
   },
 
   {
-    name: "slim fit Tee",
+    name: "Midnight Oversized Tee",
     description: "Heavyweight cotton",
-    price: 1100,
+    price: 1699,
     category: "tshirt",
     color: "black",
     badge: "BESTSELLER"
@@ -27,7 +27,7 @@ const products = [
   {
     name: "Stone Cargo Pants",
     description: "Relaxed fit cargo pants",
-    price: 1800,
+    price: 2899,
     category: "pants",
     color: "brown",
     badge: ""
@@ -54,7 +54,7 @@ const products = [
   {
     name: "Graphic Logo Tee",
     description: "Premium oversized fit",
-    price: 1500,
+    price: 6969696,
     category: "tshirt",
     color: "white",
     badge: ""
@@ -72,7 +72,7 @@ const products = [
   {
     name: "Sand Relaxed Pants",
     description: "Everyday relaxed fit",
-    price: 3999,
+    price: 2599,
     category: "pants",
     color: "brown",
     badge: ""
