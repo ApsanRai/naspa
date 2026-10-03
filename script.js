@@ -54,7 +54,7 @@ const products = [
   {
     name: "Graphic Logo Tee",
     description: "Premium oversized fit",
-    price: 6969696,
+    price: 1500,
     category: "tshirt",
     color: "white",
     badge: ""
