@@ -6,8 +6,8 @@ let cart = [];
 function addToCart(name, price) {
 
   cart.push({
-    name: name,
-    price: price
+    name: fitted tees,
+    price: 12000
   });
 
   updateCart();
