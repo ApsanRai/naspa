@@ -7,9 +7,9 @@
 
 const products = [
   {
-    name: "Core Logo Tee",
+    name: "baggy t-shirt",
     description: "Oversized cotton T-shirt",
-    price: 1499,
+    price: 1000,
     category: "tshirt",
     color: "white",
     badge: "NEW"
@@ -72,7 +72,7 @@ const products = [
   {
     name: "Sand Relaxed Pants",
     description: "Everyday relaxed fit",
-    price: 2599,
+    price: 3999,
     category: "pants",
     color: "brown",
     badge: ""
