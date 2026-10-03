@@ -1,0 +1,385 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>NAPSA | Streetwear</title>
+
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+  <!-- NAVBAR -->
+  <header>
+    <div class="logo">NAPSA<span>®</span></div>
+
+    <nav>
+      <a href="#home">Home</a>
+      <a href="#shop">Shop</a>
+      <a href="#about">About</a>
+      <a href="#contact">Contact</a>
+    </nav>
+
+    <button class="cart-btn" onclick="openCart()">
+      🛒 Cart <span id="cart-count">0</span>
+    </button>
+  </header>
+
+
+  <!-- HERO -->
+  <section class="hero" id="home">
+
+    <div class="hero-text">
+
+      <p class="small-title">NEW COLLECTION — 2026</p>
+
+      <h1>
+        WEAR<br>
+        YOUR<br>
+        <span>ENERGY.</span>
+      </h1>
+
+      <p class="description">
+        Modern streetwear made for people who move different.
+      </p>
+
+      <a href="#shop" class="shop-btn">
+        SHOP NOW →
+      </a>
+
+    </div>
+
+    <div class="hero-image">
+
+      <div class="circle"></div>
+
+      <div class="shirt">
+        NAPSA
+      </div>
+
+    </div>
+
+  </section>
+
+
+  <!-- TICKER -->
+  <div class="ticker">
+    NAPSA • BUILT DIFFERENT • NAPSA • BUILT DIFFERENT •
+    NAPSA • BUILT DIFFERENT • NAPSA • BUILT DIFFERENT •
+  </div>
+
+
+  <!-- SHOP -->
+  <section class="shop" id="shop">
+
+    <div class="section-title">
+
+      <div>
+        <p class="small-title">THE DROP</p>
+        <h2>Latest Pieces</h2>
+      </div>
+
+      <div class="filters">
+        <button onclick="filterProducts('all')">ALL</button>
+        <button onclick="filterProducts('tshirt')">T-SHIRTS</button>
+        <button onclick="filterProducts('pants')">PANTS</button>
+      </div>
+
+    </div>
+
+
+    <div class="products" id="products">
+
+      <!-- PRODUCT 1 -->
+      <div class="product tshirt">
+
+        <div class="product-img white">
+          <span class="new">NEW</span>
+
+          <div class="fake-shirt">
+            NAPSA
+          </div>
+        </div>
+
+        <h3>Core Logo Tee</h3>
+
+        <p>Oversized cotton T-shirt</p>
+
+        <strong>Rs. 1,499</strong>
+
+        <button onclick="addToCart('Core Logo Tee',1499)">
+          ADD TO CART
+        </button>
+
+      </div>
+
+
+      <!-- PRODUCT 2 -->
+      <div class="product tshirt">
+
+        <div class="product-img black">
+
+          <span class="new">BESTSELLER</span>
+
+          <div class="fake-shirt white-shirt">
+            NAPSA
+          </div>
+
+        </div>
+
+        <h3>Midnight Oversized Tee</h3>
+
+        <p>Heavyweight cotton</p>
+
+        <strong>Rs. 1,699</strong>
+
+        <button onclick="addToCart('Midnight Oversized Tee',1699)">
+          ADD TO CART
+        </button>
+
+      </div>
+
+
+      <!-- PRODUCT 3 -->
+      <div class="product pants">
+
+        <div class="product-img brown">
+
+          <div class="fake-pants">
+            NAPSA
+          </div>
+
+        </div>
+
+        <h3>Stone Cargo Pants</h3>
+
+        <p>Relaxed fit cargo pants</p>
+
+        <strong>Rs. 2,899</strong>
+
+        <button onclick="addToCart('Stone Cargo Pants',2899)">
+          ADD TO CART
+        </button>
+
+      </div>
+
+
+      <!-- PRODUCT 4 -->
+      <div class="product pants">
+
+        <div class="product-img grey">
+
+          <div class="fake-pants dark-pants">
+            NAPSA
+          </div>
+
+        </div>
+
+        <h3>Utility Wide Pants</h3>
+
+        <p>Wide fit everyday pants</p>
+
+        <strong>Rs. 2,699</strong>
+
+        <button onclick="addToCart('Utility Wide Pants',2699)">
+          ADD TO CART
+        </button>
+
+      </div>
+
+
+      <!-- PRODUCT 5 -->
+      <div class="product tshirt">
+
+        <div class="product-img black">
+
+          <div class="fake-shirt white-shirt">
+            NAPSA
+          </div>
+
+        </div>
+
+        <h3>Essential Black Tee</h3>
+
+        <p>Minimal everyday T-shirt</p>
+
+        <strong>Rs. 1,399</strong>
+
+        <button onclick="addToCart('Essential Black Tee',1399)">
+          ADD TO CART
+        </button>
+
+      </div>
+
+
+      <!-- PRODUCT 6 -->
+      <div class="product tshirt">
+
+        <div class="product-img white">
+
+          <div class="fake-shirt">
+            NAPSA
+          </div>
+
+        </div>
+
+        <h3>Graphic Logo Tee</h3>
+
+        <p>Premium oversized fit</p>
+
+        <strong>Rs. 1,599</strong>
+
+        <button onclick="addToCart('Graphic Logo Tee',1599)">
+          ADD TO CART
+        </button>
+
+      </div>
+
+
+      <!-- PRODUCT 7 -->
+      <div class="product pants">
+
+        <div class="product-img grey">
+
+          <div class="fake-pants dark-pants">
+            NAPSA
+          </div>
+
+        </div>
+
+        <h3>Washed Grey Pants</h3>
+
+        <p>Relaxed street fit</p>
+
+        <strong>Rs. 2,799</strong>
+
+        <button onclick="addToCart('Washed Grey Pants',2799)">
+          ADD TO CART
+        </button>
+
+      </div>
+
+
+      <!-- PRODUCT 8 -->
+      <div class="product pants">
+
+        <div class="product-img brown">
+
+          <div class="fake-pants">
+            NAPSA
+          </div>
+
+        </div>
+
+        <h3>Sand Relaxed Pants</h3>
+
+        <p>Everyday relaxed fit</p>
+
+        <strong>Rs. 2,599</strong>
+
+        <button onclick="addToCart('Sand Relaxed Pants',2599)">
+          ADD TO CART
+        </button>
+
+      </div>
+
+    </div>
+
+  </section>
+
+
+  <!-- STATEMENT -->
+  <section class="statement">
+
+    <p class="small-title">NAPSA MANIFESTO</p>
+
+    <h2>
+      NOT MADE<br>
+      TO FIT IN.<br>
+
+      <span>MADE TO STAND OUT.</span>
+    </h2>
+
+  </section>
+
+
+  <!-- ABOUT -->
+  <section class="about" id="about">
+
+    <div>
+
+      <p class="small-title">ABOUT NAPSA</p>
+
+      <h2>
+        EVERYDAY CLOTHES.<br>
+        NOT EVERYDAY ENERGY.
+      </h2>
+
+    </div>
+
+    <p>
+      NAPSA is a streetwear brand built around clean
+      designs, comfortable fits and bold energy.
+
+      We believe your clothes should represent who you are,
+      not what everyone expects you to be.
+    </p>
+
+  </section>
+
+
+  <!-- FOOTER -->
+  <footer id="contact">
+
+    <div class="logo">NAPSA<span>®</span></div>
+
+    <p>© 2026 NAPSA. All rights reserved.</p>
+
+    <div class="footer-links">
+      <a href="tel:+923001234567">+92 300 1234567</a>
+      <a href="#">Instagram</a>
+      <a href="#">TikTok</a>
+      <a href="#">Contact</a>
+    </div>
+
+  </footer>
+
+
+  <!-- CART -->
+  <div class="cart" id="cart">
+
+    <div class="cart-header">
+
+      <h2>Your Cart</h2>
+
+      <button onclick="closeCart()">×</button>
+
+    </div>
+
+    <div id="cart-items"></div>
+
+    <div class="cart-bottom">
+
+      <div class="total">
+        <span>Total</span>
+        <strong id="total">Rs. 0</strong>
+      </div>
+
+      <button class="checkout" onclick="checkout()">
+        CHECKOUT →
+      </button>
+
+    </div>
+
+  </div>
+
+
+  <div class="overlay" id="overlay" onclick="closeCart()"></div>
+
+
+  <script src="script.js"></script>
+
+</body>
+</html>
